@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-<<<<<<< HEAD
-        <link rel="stylesheet" href="styles.css">
-=======
     <link rel="stylesheet" href="styles.css">
->>>>>>> f64aff2209fbd7e5120ab720d3aa6a1e57a6699b
 </head>
 
 <body>
@@ -47,11 +43,7 @@
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> f64aff2209fbd7e5120ab720d3aa6a1e57a6699b
                             <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i><sup>1</sup></a>
                         </li>
                         <li class="nav-item">
@@ -65,12 +57,6 @@
                 </div>
             </div>
         </nav>
-<<<<<<< HEAD
-        <!-- last child -->
-         <div class="bg-info p-3 text-center">
-            <center><p>All Rights Reserved. Sasith Bogahawatte</p></center>
-         </div>
-=======
         <!-- Second Child -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
             <ul class="navbar-nav me-auto">
@@ -249,7 +235,6 @@
                 <p>All Rights Reserved. Sasith Bogahawatte</p>
             </center>
         </div>
->>>>>>> f64aff2209fbd7e5120ab720d3aa6a1e57a6699b
     </div>
     <!-- bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
