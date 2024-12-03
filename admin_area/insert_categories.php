@@ -1,3 +1,7 @@
+<?php
+include '../includes/connect.php';
+?>
+
 <form action="" method="POST" class="mb-2">
 
 <div class="input-group mb-3 w-90">
