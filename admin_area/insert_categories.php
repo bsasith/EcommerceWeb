@@ -18,7 +18,7 @@ if (isset($_POST['insert_cat'])) {
   }
 }}
 ?>
-
+<h2 class="text-center">Insert Categories</h2>
 <form action="" method="POST" class="mb-2">
 
   <div class="input-group mb-3 w-90">
