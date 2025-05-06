@@ -49,7 +49,7 @@
                     <p class="text-center text-light">Admin name</p>
                 </div>
                 <div class="button text-center align-items-center mx-5">
-                    <button class="py-2 px-2 mx-1 bg-info"><a href="" class="nav-link text-light  my-1 mx-1">Insert Products</a></button>
+                    <button class="py-2 px-2 mx-1 bg-info"><a href="insert_products.php" class="nav-link text-light  my-1 mx-1">Insert Products</a></button>
                     <button class="py-2 px-2 mx-1 bg-info my-2"><a href="" class="nav-link text-light bg-info my-1 mx-1">View Products</a></button>
                     <button class="py-2 px-2 mx-1 bg-info my-2"><a href="index.php?insert_category" class="nav-link text-light bg-info my-1 mx-1">Insert Categories</a></button>
                     <button class="py-2 px-2 mx-1 bg-info my-2"><a href="" class="nav-link text-light bg-info my-1 mx-1">View Categories</a></button>
