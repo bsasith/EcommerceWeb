@@ -1,3 +1,6 @@
+<?php
+include '../includes/connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,10 +48,16 @@
                 <label for="product_categories" class="form-label">Product Category</label>
                 <select name="product_categories" id="product_categories" class="form-control">
                     <option value="">Select category</option>
-                    <option value="">Category1</option>
-                    <option value="">Category2</option>
-                    <option value="">Category3</option>
-                    <option value="">Category4</option>
+                   <?php
+                   $select_query= "select * from categories";
+                   $result_select=mysqli_query($con,$select_query);
+                   while($row=mysqli_fetch_assoc($result_select)){
+                    $category_title=$row['category_title'];
+                    $category_id=$row['category_id'];
+                    echo "<option value='$category_id'>$category_title</option>";
+                   }
+
+                   ?>
                 </select>
 
             </div>
@@ -57,10 +66,16 @@
                 <label for="product_brand" class="form-label">Product Brand</label>
                 <select name="product_brand" id="" class="form-control">
                     <option value="">Select Brand </option>
-                    <option value="">Brand 1</option>
-                    <option value="">Brand 2</option>
-                    <option value="">Brand 3</option>
-                    <option value="">Brand 4</option>
+                    <?php
+                   $select_query= "select * from brands";
+                   $result_select=mysqli_query($con,$select_query);
+                   while($row=mysqli_fetch_assoc($result_select)){
+                    $brand_title=$row['brand_title'];
+                    $brand_id=$row['brand_id'];
+                    echo "<option value='$brand_id'>$brand_title</option>";
+                   }
+
+                   ?>
                 </select>
             </div>
             <!-- product image1 -->
