@@ -114,7 +114,7 @@ include('includes\connect.php');
                             </div>
                         </div>
                     </div>";
-
+echo $product_image1;
                     }
                     ?>
                     
