@@ -1,5 +1,6 @@
 <?php
 include('includes\connect.php');
+include('functions\common_function.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,38 +89,14 @@ include('includes\connect.php');
             <div class="col-md-10">
                 <div class="row">
                     <!-- fetching products -->
-                    <?php 
-                    $select_query= "Select * from `products`";
-                    $result_query= mysqli_query($con,$select_query);
-                    // $row = mysqli_fetch_assoc($result_query);
-                    // echo $row['product_title'];
-                    while($row = mysqli_fetch_assoc($result_query)){
-                        $product_id=$row['product_id'];
-                        $product_title=$row['product_title'];
-                        $product_description=$row['product_description'];
-                        $product_image1=$row['product_image1'];
-                        $product_price=$row['product_price'];
-                        $category_id=$row['category_id'];
-                        $brand_id=$row['brand_id'];
-                        $product_id=$row['product_id'];
-                        $product_id=$row['product_id'];
-                        echo "<div class='col-md-4 mb-2'>
-                        <div class='card '>
-                            <img class='card-img-top' src='./admin_area/product_images/$product_image1' alt='Card image cap'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>$product_title</h5>
-                                <p class='card-'text'>$product_description</p>
-                                <a href='#' class='btn btn-info'>Add to Cart</a>
-                                <a href='#' class='btn btn-secondary'>View more</a>
-                            </div>
-                        </div>
-                    </div>";
-echo $product_image1;
-                    }
+                    <?php
+                    getproducts();
+                    get_unique_categories();
+                    get_unique_brands();
                     ?>
-                    
 
-                    
+
+
                 </div>
             </div>
             <!-- side nav -->
@@ -132,64 +109,42 @@ echo $product_image1;
                         </a>
                     </li>
                     <?php
-                    $select_brands = "select * from brands";
-                    $result_brands = mysqli_query($con, $select_brands);
-                    // $row_data=mysqli_fetch_assoc($result_brands);
-                    while ($row_data = mysqli_fetch_assoc($result_brands)) {
-                        $brand_title = $row_data['brand_title'];
-                        $brand_id = $row_data['brand_id'];
-                        echo "<li class='nav-item'>
-                        <a href='index.php?brand=$brand_id' class='nav-link text-light'>
-                            $brand_title
-                        </a>
-                    </li>";
-
-                    }
+                    //get brands
+                    getbrands();
 
                     ?>
-                    
 
-                    </ul>
-                    <!-- Categories to be displayed -->
-                    <ul class="navbar-nav me-auto text-center">
-                        <li class="nav-item bg-info">
-                            <a href="#" class="nav-link text-light ">
-                                <h4> Categories</h4>
-                            </a>
-                        </li>
-                        <?php
-                    $select_categories = "select * from categories";
-                    $result_categories = mysqli_query($con, $select_categories);
-                    // $row_data=mysqli_fetch_assoc($result_brands);
-                    while ($row_data = mysqli_fetch_assoc($result_categories)) {
-                        $category_title = $row_data['category_title'];
-                        $category_id = $row_data['category_id'];
-                        echo "<li class='nav-item'>
-                        <a href='index.php?category=$category_id' class='nav-link text-light'>
-                            $category_title
+
+                </ul>
+                <!-- Categories to be displayed -->
+                <ul class="navbar-nav me-auto text-center">
+                    <li class="nav-item bg-info">
+                        <a href="#" class="nav-link text-light ">
+                            <h4> Categories</h4>
                         </a>
-                    </li>";
-
-                    }
+                    </li>
+                    <?php
+                    //get categories
+                    getcategories()
 
                     ?>
-                        
 
 
-                    </ul>
-            </ul>
+
+                </ul>
+                </ul>
+            </div>
+            <!-- last child -->
+            <div class="bg-info p-3 text-center">
+                <center>
+                    <p>All Rights Reserved. Sasith Bogahawatte</p>
+                </center>
+            </div>
         </div>
-        <!-- last child -->
-        <div class="bg-info p-3 text-center">
-            <center>
-                <p>All Rights Reserved. Sasith Bogahawatte</p>
-            </center>
-        </div>
-    </div>
-    <!-- bootstrap js link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <!-- bootstrap js link -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
