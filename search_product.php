@@ -91,7 +91,7 @@ include('functions\common_function.php');
                 <div class="row">
                     <!-- fetching products -->
                     <?php
-                    getproducts();
+                    search_products();
                     get_unique_categories();
                     get_unique_brands();
                     ?>

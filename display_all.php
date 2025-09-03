@@ -55,9 +55,8 @@ include('functions\common_function.php');
                         </li>
                     </ul>
                     <form class="d-flex" role="search" method="GET" action="search_product.php">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                         <input type="submit" value="Search" class="btn btn-outline-success" name="search_data_product">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -91,7 +90,7 @@ include('functions\common_function.php');
                 <div class="row">
                     <!-- fetching products -->
                     <?php
-                    getproducts();
+                    get_all_products();
                     get_unique_categories();
                     get_unique_brands();
                     ?>
@@ -136,11 +135,10 @@ include('functions\common_function.php');
                 </ul>
             </div>
             <!-- last child -->
-            <div class="bg-info p-3 text-center">
-                <center>
-                    <p>All Rights Reserved. Sasith Bogahawatte</p>
-                </center>
-            </div>
+         <!-- include footer -->
+          <?php
+          include ("./includes/footer.php")
+          ?>
         </div>
         <!-- bootstrap js link -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
