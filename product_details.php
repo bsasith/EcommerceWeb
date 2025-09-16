@@ -57,7 +57,7 @@ include('functions\common_function.php');
                     <form class="d-flex" role="search" method="GET" action="search_product.php">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
                         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                         <input type="submit" value="Search" class="btn btn-outline-success" name="search_data_product">
+                        <input type="submit" value="Search" class="btn btn-outline-success" name="search_data_product">
                     </form>
                 </div>
             </div>
@@ -89,31 +89,12 @@ include('functions\common_function.php');
 
             <div class="col-md-10">
                 <div class="row">
-                    <!-- fetching products -->
-                     <div class="col-md-4">
-                        <!-- card -->
-                         <div class='card '>
-                            <img class='card-img-top my-4' src='images\pinapples.jpg' alt='Card image cap'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>$product_title</h5>
-                                <p class='card-'text'>$product_description</p>
-                                <a href='#' class='btn btn-info'>Add to Cart</a>
-                                <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
-                            </div>
-                        </div>
-                     </div>
-                     <div class="col-md-8">
-                        <h4 class="text-info text-center mb-5"> Related Images</h4>
-                        <!-- related images -->
-                     </div>
-                     <div class="col-md-6">
-                        <img class='card-img-top my-4' src='images\pinapples.jpg' alt='Card image cap'>
-                     </div>
-                      <div class="col-md-6">
-                        <img class='card-img-top my-4' src='images\pinapples.jpg' alt='Card image cap'>
-                      </div>
+
+
+
                     <?php
                     //getproducts();
+                    view_details();
                     get_unique_categories();
                     get_unique_brands();
                     ?>
